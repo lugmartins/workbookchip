@@ -12,16 +12,16 @@ body {
     display: flex;
     margin-top: 25px; /* Espaço acima do logotipo */
     margin-bottom: 25px; /* Espaço abaixo do logotipo */
-    margin-left: 20px;
+    margin-left: 16px;
     transition: .3s;
 }
 
 .logo img{
-    max-width: 30px; /* Largura máxima do logotipo */
+    max-width: 35px; /* Largura máxima do logotipo */
     height: auto;
 }
 .logo span{
-    margin-top: 3px;
+    margin-top: 6px;
     margin-left: 0px;
     color: #161a29;
     transition: .3s;
@@ -44,7 +44,7 @@ body {
 }
 
 .sidebar:hover .logo{
-    margin-left: 50px;
+    margin-left: 54.8px;
 }
 
 .sidebar:hover .logo span{
