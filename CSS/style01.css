@@ -9,16 +9,22 @@ body {
 }
 
 .logo {
-    text-align: center;
+    display: flex;
     margin-top: 25px; /* Espaço acima do logotipo */
     margin-bottom: 25px; /* Espaço abaixo do logotipo */
+    margin-left: 20px;
+    transition: .3s;
 }
 
-.logo img {
+.logo img{
     max-width: 30px; /* Largura máxima do logotipo */
     height: auto;
-    display: block; /* Garante que a imagem se comporte como bloco */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+.logo span{
+    margin-top: 3px;
+    margin-left: 0px;
+    color: #161a29;
+    transition: .3s;
 }
 
 .sidebar{
@@ -37,8 +43,31 @@ body {
     width: 200px;
 }
 
+.sidebar:hover .logo{
+    margin-left: 50px;
+}
+
+.sidebar:hover .logo span{
+    color: #ffffff;
+}
+
 .sidebar:hover ~ .content h2{
     padding-left: 140px;
+}
+
+.direitos span{
+    font-size: 9px;
+    position: fixed;
+    bottom: 25px;
+    width: 67px;
+    text-align: center;
+    color: #c4c4c4;
+    display: block;
+    transition: .3s;
+}
+
+.sidebar:hover .direitos span{
+    width: 200px;
 }
 
 ul {
