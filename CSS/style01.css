@@ -1,0 +1,169 @@
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #EEF9FC;
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 25px; /* Espaço acima do logotipo */
+    margin-bottom: 25px; /* Espaço abaixo do logotipo */
+}
+
+.logo img {
+    max-width: 30px; /* Largura máxima do logotipo */
+    height: auto;
+    display: block; /* Garante que a imagem se comporte como bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+.sidebar{
+    width: 67px;
+    background-color: #202020;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 4px 0 0 #002983;
+    overflow: hidden;
+    transition: .3s;
+    z-index: 1000;
+}
+
+.sidebar:hover{
+    width: 200px;
+}
+
+.sidebar:hover ~ .content h2{
+    padding-left: 140px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.item-menu:hover{
+    background-color: #333333;
+    width: 200px;
+
+}
+
+ul li.item-menu a{
+    display: block;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: flex;
+    font-size: 17px;
+    padding-left: 25px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 30px;
+}
+
+.sidebar a.active {
+    background-color: #002983; /* Cor de fundo para o item ativo */
+}
+
+.content {
+    margin-left: 71px;
+    padding-top: 40px;
+    overflow: hidden; /* Evita rolagem na página inteira */
+    height: calc(100% - 200px);
+    width: 100%;
+}
+
+.content h2{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #141414;
+    margin: 0px;
+    margin-bottom: 50px;
+    padding: 5px;
+    padding-left: 7px;
+    color: #ddd;
+    text-decoration: none;
+    box-shadow: 0 4px 0 #707070;
+    transition: .3s;
+}
+
+.content p{
+    margin-left: 10px;
+}
+
+#manuais a{
+    text-decoration: none;
+    color: #181818;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 5);
+    background-color: #cccccc;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 4px;
+    margin-right: 6px;
+    padding: 4px;
+    padding-left: 10px;
+    display: block;
+    border-radius: 12px;
+    transition: .2s;
+}
+
+#manuais a:hover{
+    background-color: #8d8d8d;
+    margin-left: 6px;
+    margin-right: 4px;
+}
+
+#macetesIframe{
+    width: 100%;
+    height: calc(100vh - 46px);
+}
+
+.tabela-container {
+    width: 100%; /* Garante que a largura é 100% */
+    max-width: calc(100% - 71px);
+    position: fixed; /* Mantém o elemento fixo */
+    bottom: 0; /* Fixa o elemento na parte inferior */
+    overflow-x: auto; /* Permite rolagem horizontal */
+    white-space: nowrap; /* Impede quebra de linha */
+    z-index: 500; /* Garante que o menu esteja acima de outros elementos */
+    display: flex;
+    box-shadow: 0 0 0 4px #707070;
+}
+
+.tabela-container::-webkit-scrollbar {
+    display: none; /* Safari e Chrome */
+}
+
+.tabela-menu {
+    display: flex;
+}
+
+.tabela-menu a {
+    margin: 0px;
+    padding: 2px;
+    background-color: #141414;
+    color: #ddd;
+    text-decoration: none;
+    text-align: center;
+    width: 125px;
+    transition: .2s;
+}
+
+.tabela-menu a:hover {
+    background-color: #2c2c2c;
+}
+
+.tabela-menu a.active {
+    background-color: #707070; /* Cor de fundo para o item ativo */
+    box-shadow: 0 -4px 0 0 #002983;
+}
