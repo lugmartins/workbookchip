@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
 body {
     display: flex;
-    font-family: Arial, sans-serif;
-    background-color: #EEF9FC;
+    font-family: Comfortaa, sans-serif;
+    background-color: #101218;
     margin: 0px;
     padding: 0px;
 }
@@ -21,11 +23,11 @@ body {
 
 .sidebar{
     width: 67px;
-    background-color: #202020;
+    background-color: #161a29;
     color: #fff;
     height: 100vh;
     position: fixed;
-    box-shadow: 4px 0 0 #002983;
+    box-shadow: 2px 0 0 #2a3554;
     overflow: hidden;
     transition: .3s;
     z-index: 1000;
@@ -49,7 +51,7 @@ ul li.item-menu{
 }
 
 ul li.item-menu:hover{
-    background-color: #333333;
+    background-color: #101218;
     width: 200px;
 
 }
@@ -69,7 +71,7 @@ ul li.item-menu a .txt-link{
 }
 
 .sidebar a.active {
-    background-color: #002983; /* Cor de fundo para o item ativo */
+    background-color: #2a3554; /* Cor de fundo para o item ativo */
 }
 
 .content {
@@ -84,14 +86,16 @@ ul li.item-menu a .txt-link{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #141414;
+    background-color: #101218;
     margin: 0px;
+    margin-left: -3px;
     margin-bottom: 50px;
     padding: 5px;
-    padding-left: 7px;
+    padding-top: 8px;
+    padding-left: 12px;
     color: #ddd;
     text-decoration: none;
-    box-shadow: 0 4px 0 #707070;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.6);
     transition: .3s;
 }
 
@@ -101,26 +105,20 @@ ul li.item-menu a .txt-link{
 
 #manuais a{
     text-decoration: none;
-    color: #181818;
+    color: #dddddd;
     font-size: 13px;
     font-weight: bold;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 5);
-    background-color: #cccccc;
-    margin-top: 7px;
-    margin-bottom: 7px;
-    margin-left: 4px;
-    margin-right: 6px;
-    padding: 4px;
-    padding-left: 10px;
+    background-color: #3e4454;
+    margin: 10px 6px 0px 6px;
+    padding: 10px;
+    padding-top: 13px;
     display: block;
-    border-radius: 12px;
-    transition: .2s;
+    border-radius: 5px;
+    transition: .16s;
 }
 
 #manuais a:hover{
-    background-color: #8d8d8d;
-    margin-left: 6px;
-    margin-right: 4px;
+    background-color: #252a36;
 }
 
 #macetesIframe{
