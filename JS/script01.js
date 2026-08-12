@@ -1,3 +1,36 @@
+// Função para carregar os manuais automaticamente do GitHub
+async function carregarManuais() {
+    const usuario = "lugmartins";
+    const repositorio = "workbookchip";
+    const pasta = "PDF CARGAS";
+
+    const apiUrl = `https://api.github.com/repos/${usuario}/${repositorio}/contents/${encodeURIComponent(pasta)}`;
+
+    try {
+        const resposta = await fetch(apiUrl);
+        const arquivos = await resposta.json();
+
+        const container = document.getElementById("lista-manuais");
+        container.innerHTML = "";
+
+        arquivos
+            .filter(item => item.name.toLowerCase().endsWith(".pdf"))
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .forEach(item => {
+                const nomeArquivo = item.name.replace(".pdf", "");
+                const link = document.createElement("a");
+                link.href = `${pasta}/${item.name}`;
+                link.target = "_blank";
+                link.textContent = nomeArquivo;
+                container.appendChild(link);
+                container.appendChild(document.createElement("br"));
+            });
+    } catch (erro) {
+        document.getElementById("lista-manuais").textContent = "Erro ao carregar manuais.";
+        console.error(erro);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.sidebar a');
     const sections = document.querySelectorAll('.content > div');
