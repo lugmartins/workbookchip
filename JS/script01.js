@@ -23,7 +23,7 @@ async function carregarManuais() {
                 link.target = "_blank";
                 link.textContent = nomeArquivo;
                 container.appendChild(link);
-                container.appendChild(document.createElement("br"));
+                // container.appendChild(document.createElement("br"));
             });
     } catch (erro) {
         document.getElementById("lista-manuais").textContent = "Erro ao carregar manuais.";
