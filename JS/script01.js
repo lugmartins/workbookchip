@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.sidebar a');
     const sections = document.querySelectorAll('.content > div');
     const tabelaLinks = document.querySelectorAll('.tabela-menu a');
+
+    carregarManuais();
     
     // Função para ativar a classe active nos links
     links.forEach(link => {
